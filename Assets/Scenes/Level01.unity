@@ -3220,6 +3220,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 45566561365761440, guid: 51980561ae7933647a40acd552f1fa61, type: 3}
   m_PrefabInstance: {fileID: 302954357}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &321909028 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3884351092077913362, guid: a0d8b307cc4785e45a18244fd214bf49, type: 3}
+  m_PrefabInstance: {fileID: 935982325}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &326732255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7539,6 +7550,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 45566561365761440, guid: 51980561ae7933647a40acd552f1fa61, type: 3}
   m_PrefabInstance: {fileID: 802806405}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &804963269 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3884351092077913362, guid: a0d8b307cc4785e45a18244fd214bf49, type: 3}
+  m_PrefabInstance: {fileID: 8983401876457953594}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &815393590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7869,6 +7891,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 45566561365761440, guid: 51980561ae7933647a40acd552f1fa61, type: 3}
   m_PrefabInstance: {fileID: 848226221}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &876082881 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3884351092077913362, guid: a0d8b307cc4785e45a18244fd214bf49, type: 3}
+  m_PrefabInstance: {fileID: 1392701629}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &877057077 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8983401876917381553, guid: a0d8b307cc4785e45a18244fd214bf49, type: 3}
@@ -13006,7 +13039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   standardTurret:
     prefab: {fileID: 6304274175994559545, guid: c90582c991fed34498c934430d7021fe, type: 3}
-    cost: 100
+    cost: 60
     upgradedPrefab: {fileID: 6304274175994559545, guid: c40624e682790b442af78694a82e2915, type: 3}
     upgradeCost: 60
   missileLauncher:
@@ -13019,6 +13052,10 @@ MonoBehaviour:
     cost: 350
     upgradedPrefab: {fileID: 3166343782531802218, guid: 10e8b3261e56d40409637d2a196b74ce, type: 3}
     upgradeCost: 250
+  standardTextCost: {fileID: 804963269}
+  missileLauncherTextCost: {fileID: 321909028}
+  laserBeamerTextCost: {fileID: 876082881}
+  buildManager: {fileID: 0}
 --- !u!1001 &1340180116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16860,7 +16897,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 324503b1cca70984494ce06dc6a96473, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -18460,10 +18497,10 @@ MonoBehaviour:
   - {fileID: 7065126744431325241, guid: 9500758fe7435e04c8557db7248fe2d1, type: 3}
   - {fileID: 7065126744431325241, guid: 0ea14897edf1d4d4a9f35c84e364caa8, type: 3}
   - {fileID: 7065126744431325241, guid: 9c91f812f0ce1904f8b7f56351b37f92, type: 3}
-  minWaves: 5
-  maxWaves: 10
+  minWaves: 1
+  maxWaves: 1
   minEnemiesCount: 1
-  maxEnemiesCount: 10
+  maxEnemiesCount: 1
   minRate: 1
   maxRate: 4
 --- !u!4 &1789439993

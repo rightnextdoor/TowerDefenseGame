@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
@@ -6,11 +7,20 @@ public class Shop : MonoBehaviour
     public TurretBlueprint missileLauncher;
     public TurretBlueprint laserBeamer;
 
+    public Text standardTextCost;
+    public Text missileLauncherTextCost;
+    public Text laserBeamerTextCost;
+
+    public 
+
     BuildManager buildManager;
 
     private void Start()
     {
         buildManager = BuildManager.instance;
+        standardTextCost.text = "$" + standardTurret.cost;
+        missileLauncherTextCost.text = "$" + missileLauncher.cost;
+        laserBeamerTextCost.text = "$" + laserBeamer.cost;
     }
 
     public void SelectStandardTurret() {
