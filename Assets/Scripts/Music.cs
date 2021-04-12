@@ -4,13 +4,11 @@ using UnityEngine.SceneManagement;
 public class Music : MonoBehaviour
 {
 
-    AudioManager audioManager;
+   AudioManager audioManager;
 
    private void Start()
     {
         audioManager = AudioManager.instance;
-
-        Debug.Log("play music");
     }
 
     private void Awake()
@@ -24,12 +22,13 @@ public class Music : MonoBehaviour
         if (scene.buildIndex == 0)
         {
             //audioManager.StopMusic();
-            //audioManager.Play("MenuTheme");
+            audioManager.Play("MenuTheme");
             Debug.Log("play menu theme");
         }
         else if (scene.buildIndex == 2) {
             //audioManager.StopMusic();
-            //audioManager.Play("Level01Theme");
+            audioManager.Play("Level01Theme");
+            //FindObjectOfType<AudioManager>().Play("Level01Theme");
             Debug.Log("Play level 01");
         }
 

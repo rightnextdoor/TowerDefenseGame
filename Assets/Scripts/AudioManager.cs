@@ -1,4 +1,5 @@
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 using System;
 using UnityEngine;
 
@@ -11,6 +12,21 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
+       
+
+        if (instance == null)
+        {
+            instance = this;
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+            Destroy(gameObject);
+            return;
+        }
+
         foreach (Sound s in sounds)
         {
 
@@ -23,19 +39,7 @@ public class AudioManager : MonoBehaviour
             s.source.outputAudioMixerGroup = s.output;
         }
 
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-
-            Destroy(gameObject);
-            return;
-        }
-
-      }
+    }
 
     public void Play(string name) {
 
@@ -51,6 +55,40 @@ public class AudioManager : MonoBehaviour
     public void StopMusic() {
         foreach (Sound s in sounds)
             s.source.Stop();
+
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.buildIndex == 0)
+        {
+            StopMusic();
+            Play("MenuTheme");
+            Debug.Log("play menu theme");
+        }
+        else if (scene.buildIndex == 2)
+        {
+            StopMusic();
+            Play("Level01Theme");
+            
+            Debug.Log("Play level 01");
+        }
+
+        //switch (scene.buildIndex)
+        //{
+        //    case 0:
+        //        Debug.Log("play menu theme");
+        //        audioManager.Play("MenuTheme");
+        //        break;
+        //    case 2:
+        //        Debug.Log("Play level 01");
+        //        audioManager.Play("Level01Theme");
+        //        break;
+        //    default:
+        //        Debug.Log("continue playing current music");
+
+        //        break;
+        //}
 
     }
 }
